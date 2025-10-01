@@ -27,6 +27,9 @@ function transformStateWithClones(state, actions) {
       case 'clear':
         nextState = {};
         break;
+
+      default:
+        throw new Error(`Action type desconhecido: ${action.type}`);
     }
 
     history.push(nextState);
